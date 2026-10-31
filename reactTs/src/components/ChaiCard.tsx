@@ -1,7 +1,15 @@
+interface ChaiCardProp {
+  name: string,
+  price: number,
+  isSpecial?: boolean,
+}
 
-const ChaiCard = ({name, price, isSpecial}) => {
+const ChaiCard = ({name, price, isSpecial = false}:ChaiCardProp) => {
   return (
-    <div>ChaiCard</div>
+    <article>
+      <h2>{name} {isSpecial && <span>🌟</span>}</h2>
+      <p>{price}</p>
+    </article>
   )
 }
 
