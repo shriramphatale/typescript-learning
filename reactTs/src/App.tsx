@@ -1,6 +1,7 @@
 import ChaiCard from "./components/ChaiCard"
 import ChaiList from "./components/ChaiList"
 import Counter from "./components/Counter"
+import OrderForm from "./components/OrderForm"
 import type { Chai } from "./types"
 
 const menu: Chai[] = [
@@ -18,11 +19,19 @@ const App = () => {
         <ChaiCard name="Headphones" price={500} />
         <ChaiCard name="Iphone" price={80000} isSpecial />
       </div>
+      <hr />
       <div>
         <Counter/>
       </div>
+      <hr />
       <div>
         <ChaiList items={menu}/>
+      </div>
+      <hr />
+      <div>
+        <OrderForm onSubmit={(order)=>{
+          console.log('order placed: ', order.name, order.cups)
+        }}/>
       </div>
     </div>
   )
