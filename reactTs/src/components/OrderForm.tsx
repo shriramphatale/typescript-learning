@@ -25,7 +25,7 @@ const OrderForm = ({ onSubmit }: OrderFormProps) => {
       /> <br />
 
       <label>Cups</label>
-      <input type="text" 
+      <input type="number" 
         value={cups}  
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setCups(Number(e.target.value))
