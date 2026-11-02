@@ -1,3 +1,4 @@
+import Card from "./components/Card"
 import ChaiCard from "./components/ChaiCard"
 import ChaiList from "./components/ChaiList"
 import Counter from "./components/Counter"
@@ -32,6 +33,12 @@ const App = () => {
         <OrderForm onSubmit={(order)=>{
           console.log('order placed: ', order.name, order.cups)
         }}/>
+      </div><hr />
+      <div>
+        <Card title="HeadPhones" footer = {<button>Order Now</button>}>
+          <p>Premium wireless headphones.</p>
+          <p>Price: ₹2,999</p>
+        </Card>
       </div>
     </div>
   )
